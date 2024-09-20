@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/ride/AllImages/AICar.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:brown;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: orangered;
+    background-color: rgba(255, 69, 0, 0.1);
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+
+/* Car Grid Layout */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s;
+}
+
+.car:hover {
+    transform: scale(1.05);
+}
+
+.car img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.car:hover img {
+    transform: scale(1.1);
+}
+
+/* Car Info */
+.car-info {
+    position: relative;
+    padding: 10px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.car-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007BFF; 
+}
+
+.car-charge {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #28a745; 
+}
+
+.car-charge span {
+    font-weight: bold;
+}
+
+.car-rating {
+    margin-top: 8px;
+    font-size: 14px;
+    color:red;
+}
+
+/* Choose Car Tips */
+.choose-car-tips {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.choose-car-tips h2 {
+    font-size: 24px;
+    color: #343a40; 
+    margin-bottom: 15px;
+}
+
+.choose-car-tips p {
+    font-size: 16px;
+    color: #495057; 
+    margin-bottom: 15px;
+}
+
+.choose-car-tips ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    color: #495057;
+}
+
+.choose-car-tips ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.choose-car-tips ul li strong {
+    color: #007bff; 
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .choose-car-tips {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .choose-car-tips h2 {
+        font-size: 20px;
+    }
+
+    .choose-car-tips p, .choose-car-tips ul li {
+        font-size: 14px;
+    }
+}
+
+/* Input Group */
+.input-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input-group label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #007bff; 
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+
+/* Additional Info Section */
+.additional-info {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #e9ecef; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info h3 {
+    margin-top: 0;
+    color: #007bff; 
+}
+
+.additional-info p {
+    margin: 0 0 10px;
+    color: #343a40; 
+}
+
+footer {
+    background-color: #343a40; 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ff9800; 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

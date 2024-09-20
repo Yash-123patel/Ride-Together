@@ -1,0 +1,80 @@
+/* terms.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image:url("/ride/AllImages/background.jpg");
+    background-size:cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color:rgb(211, 211, 211, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #495057;
+    margin-bottom: 15px;
+    font-size: 1.75em;
+}
+
+.terms {
+    margin-bottom: 20px;
+}
+
+.terms ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.terms li {
+    margin-bottom: 10px;
+    color: black;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+p{
+	color: red;
+	font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: highlight;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}

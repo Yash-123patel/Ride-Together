@@ -1,0 +1,95 @@
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff7e5f;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .heading img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .options ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .options ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
+
+        .options ul li a:hover {
+            background-color: #2980b9;
+        }
+
+        section.details {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-intro h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .info-intro p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info h3, .info p {
+            margin: 10px 0;
+            color: #34495e;
+        }
+
+        /* Button styling */
+        .booking-button, button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #e74c3c;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .booking-button:hover, button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }

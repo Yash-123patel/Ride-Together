@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    background: url("/ride/AllImages/homeBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+#logo{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    position: absolute;
+    top: 40px;
+    left: 210px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: orangered;
+    background-color: rgba(255, 69, 0, 0.1);
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+ 
+}
+form {
+    background: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(1px); 
+    padding: 5rem 1rem;
+    border-radius: 1rem;
+    min-width: 380px;
+    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.5)); 
+    
+}
+label {
+    font-size: 22px;
+    color:black;
+    margin-bottom: 5px;
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+}
+h2 {
+    color: crimson;
+    font-size: 50px;
+}
+input {
+    width: 50%;
+    padding: 0.9rem;
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent input fields */
+}
+.form-group {
+    margin-bottom: 1.4rem;
+}
+.button {
+    width: 20%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: rgba(233, 101, 47, 0.7);
+    border: none;
+    display: block;
+    font-size:22px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+.button:hover {
+    background-color: rgba(233, 101, 47, 1);
+}
+
+
+.flex-50 {
+    flex: 50%;
+}
+::placeholder {
+    color: #d1cfcf;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+footer {
+    background-color: #343a40; /* Dark footer background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ff9800; 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

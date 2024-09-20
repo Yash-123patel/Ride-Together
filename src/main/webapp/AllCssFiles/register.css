@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+   body {
+   
+    background: url('/ride/AllImages/homeBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 1650px;
+    width: 100%;
+    position: relative;
+  }
+  .img{
+    position: absolute;
+    left: 20px;
+   
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    height: 1550px;
+    max-width: 900px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.15); /* Slightly darker shadow */
+  }
+  .container header{
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 90px;
+    padding: 5px;
+    text-shadow: #ffffff 0 0 12px,
+                   #00c3ce 0 0 25px,
+                   #00c3ce 0 0 25px,
+                   #00c3ce 0 0 25px;
+  }
+  .fields{
+    margin: 20px;
+    padding: 20px;
+    
+  }
+
+  .field label {
+    color: black; /* Darker text color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+  
+  .field input {
+    height: 45px;
+    width: 100%;
+    background: #f5f5f5; /* Light gray background */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 4px;
+    outline: none;
+    color: #333; /* Darker text color */
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  
+  .red-star {
+    color: red;
+}
+
+.btn input{
+  position: absolute;
+  right: 40px;
+  margin-top: 40px;
+  height: 45px;
+  width: 200px;
+  background: black; /* Light gray background */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 4px;
+  outline: none;
+  color: white; /* Darker text color */
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 2px;
+
+}
+
+  .signup {
+    margin-top: 70px;
+    margin-right: 300px;
+    font-size: 20px;
+    color: orangered; /* Light text color */
+    font-family: 'Poppins', sans-serif;
+    
+   
+  }
+  
+  .signup a {
+    color: #2980b9; 
+    text-decoration: none;
+  }
+  
+  .signup a:hover {
+    text-decoration: underline;
+  }
+  .error {
+    color: red; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+  #message{
+  color: red; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+  
+  
+  
+  

@@ -7,6 +7,8 @@ public class Constants {
 	//public static final String LOGINCOUNT="select count(*) from ridetogetherusers where email=? and password=?";
 	public static final String LOGIN= "select * from ridetogetherusers where email=? and password=?";
 
+	public static final String PASSWORD="update ridetogetherusers set password=? where email=?";
+	
    public static final String CARDETAILS="select * from ridetogethercars where carid=?";
    
    public static final String BOOKINGDETAIL="INSERT INTO ridetogetherbooking VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";

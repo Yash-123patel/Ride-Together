@@ -34,10 +34,7 @@ public class CarLoginRegisterController {
 		return "register";
 	}
 
-	@GetMapping("/fogetPassword")
-	public String fogetPassword() {
-		return "forgetpassword";
-	}
+	
 
 	@RequestMapping("/register")
 	public String register(@Validated User user, Errors result, Model model) {
@@ -80,6 +77,21 @@ public class CarLoginRegisterController {
 		} catch (Exception e) {
 			return "somethingWrong";
 		}
+	}
+	
+	@RequestMapping("/forgotPasswordPage")
+	public String forgotPasswordPage() {
+		return "forgetpassword";
+	}
+	
+	@RequestMapping("/forgotPassWord")
+	public String forgotPassWord(HttpServletRequest req,Model model) {
+		String email=req.getParameter("email");
+		String password=req.getParameter("password");
+		dao.changePassword(email, password);
+		model.addAttribute("pass", "Password Update Successfully");
+		
+		return "forgetpassword";
 	}
 
 	@RequestMapping("/options")

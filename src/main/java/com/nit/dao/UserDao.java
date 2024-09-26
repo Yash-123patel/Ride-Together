@@ -12,6 +12,8 @@ public interface UserDao {
 	void userRegistration(User user) throws Exception;
 	
 	User login(String email,String password);
+	
+	void changePassword(String email,String password);
 
 	Car getCarInfo(String carid);
 	

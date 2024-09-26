@@ -46,6 +46,13 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 			return null;
 		return user.get(0);
 	}
+	
+	@Override
+	@Transactional(rollbackForClassName = { "java.lang.Exception" })
+	public void changePassword(String email, String password) {
+		getJdbcTemplate().update(PASSWORD, password,email);
+		
+	}
 
 	@Override
 	public Car getCarInfo(String carid) {
@@ -123,6 +130,8 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 		List<BookingDetails> list = getJdbcTemplate().query(GETHISTORYDETAILS,bookingRowMapper,email,returnStatus);
 		return list;
 	}
+
+	
 
 	
 

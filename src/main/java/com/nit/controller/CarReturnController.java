@@ -47,10 +47,25 @@ public class CarReturnController {
 	}
 
 	@RequestMapping("/returnCar")
-	public String returnCar(HttpServletRequest req) {
+	public String returnCar(HttpServletRequest req,Model model) {
 		Long bookingId = Long.valueOf(req.getParameter("bookingid"));
 
 		try {
+			HttpSession session = req.getSession(false);
+			Map<String, Object> rideMap = (Map<String, Object>) session.getAttribute("AllInfo");
+			User user = (User) rideMap.get("user");
+			BookingDetails bookingDetails = dao.getBookingDetails(user.getEmail(),user.getAadharNo());
+			
+			Date returnDate = bookingDetails.getReturnDate();
+			LocalDate rtDate=returnDate.toLocalDate();
+			LocalDate today = LocalDate.now();
+			 Period period = Period.between(today,rtDate);
+			 int days = period.getDays();
+			int extra= days*6000;
+			if(extra>0) {
+				model.addAttribute("extra", period);
+				return "payExtra";
+			}
 			dao.returnCar(bookingId);
 		} catch (Exception e) {
 			return "somethingWrong";
@@ -70,7 +85,6 @@ public class CarReturnController {
 		try {
 			Long bookingId = Long.valueOf(req.getParameter("bookingid"));
 			String emmail = req.getParameter("email");
-			String reason = req.getParameter("reason");
 
 			BookingDetails cancelationInfo = dao.getCancelationInfo(bookingId, emmail);
 			if (cancelationInfo == null) {
@@ -81,7 +95,8 @@ public class CarReturnController {
 				LocalDate pickupLocalDate = picUpDate.toLocalDate();
 				LocalDate today = LocalDate.now();
 				 Period period = Period.between(today, pickupLocalDate);
-				 if(period.getDays()>=1) {
+				 System.out.println(period);
+				 if(period.getDays()>=0) {
 					 model.addAttribute("info", cancelationInfo);
 						return "booking_details";
 				 }

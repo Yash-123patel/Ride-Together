@@ -13,7 +13,6 @@ public class Constants {
    
    public static final String BOOKINGDETAIL="INSERT INTO ridetogetherbooking VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-
    public static final String GETBOOKINGDETAILS="select * from ridetogetherbooking where email=? and aadharno=?";
    
    public static final String GETBOOKINGSTATUS="select count(*) from ridetogetherbooking where EMAIL=? AND RETURNSTATUS=? ";
@@ -25,4 +24,6 @@ public class Constants {
    public static final String CANCLEBOOKING="update ridetogetherbooking set returnstatus='C' where bookingid=?"; 
 
    public static final String GETHISTORYDETAILS="select * from ridetogetherbooking where email=? and returnstatus=?";
+   
+   public static final String GETALLCARS="select * from cardetails";
 }

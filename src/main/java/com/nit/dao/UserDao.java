@@ -32,5 +32,6 @@ public interface UserDao {
 	
 	List<BookingDetails> gethistory(String email,String returnStatus);
 	
+	List<Car> getAllCars();	
 }
 

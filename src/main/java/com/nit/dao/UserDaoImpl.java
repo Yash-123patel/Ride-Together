@@ -131,6 +131,12 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 		return list;
 	}
 
+	@Override
+	public List<Car> getAllCars() {
+		List<Car>allCars=getJdbcTemplate().query(GETALLCARS, carrowMapper);
+		return allCars;
+	}
+
 	
 
 	

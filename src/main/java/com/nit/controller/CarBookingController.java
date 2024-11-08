@@ -57,7 +57,7 @@ public class CarBookingController {
 	
 
 	@RequestMapping("/locationInfo")
-	public String locationInfo(HttpServletRequest req) {
+	public String locationInfo(HttpServletRequest req,Model model ) {
 
 		try {
 			Location location = new Location(req.getParameter("state"), req.getParameter("city"),
@@ -72,6 +72,7 @@ public class CarBookingController {
 				
 				rideMap.put("location", location);
 				session.setAttribute("AllInfo", rideMap);
+				model.addAttribute("allCars", dao.getAllCars());
 
 				return "availablecars";
 			}

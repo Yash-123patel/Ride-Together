@@ -1,3 +1,5 @@
+<%@page import="com.nit.model.Car"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,7 +14,7 @@
 </style>
 </head>
 <body>
-    
+    <%List<Car>allCars=(List<Car>)request.getAttribute("allCars"); %>
     <div class="container">
         <header>
                 <nav>
@@ -37,126 +39,17 @@
             <p>Take a look at the car options below and select the one that best suits your needs!</p>
         </div>
         <div class="car-grid">
-            <div class="car" data-car-id="C001" onclick="selectCar('C001')">
+           <%for(Car c:allCars){ %>
+            <div class="car" data-car-id="C001" onclick="selectCar('<%=c.getCarId() %>')">
                 <img src="/ride/AllImages/swift.jpg" alt="Car Image 1">
                 <div class="car-info">
-                    <div class="car-name">Swift&nbsp;- C001</div>
-                    <div class="car-charge">Per Day: 3000</div>
+                    <div class="car-name"><%=c.getCarName() %>&nbsp;- <%=c.getCarId() %></div>
+                    <div class="car-charge">Per Day: <%=c.getPerDayCharge()%></div>
                     <div class="car-rating">Rating: ★★★★☆</div>
                 </div>
             </div>
-            <div class="car" data-car-id="C002" onclick="selectCar('C002')">
-                <img src="/ride/AllImages/innova.jpg" alt="Car Image 2">
-                <div class="car-info">
-                    <div class="car-name">Innova&nbsp;- C002</div>
-                    <div class="car-charge">Per Day: 7000</div>
-                    <div class="car-rating">Rating: ★★★★★</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C003" onclick="selectCar('C003')">
-                <img src="/ride/AllImages/hond.jpg" alt="Car Image 3">
-                <div class="car-info">
-                    <div class="car-name">Honda City&nbsp;- C003</div>
-                    <div class="car-charge">Per Day: 6500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C004" onclick="selectCar('C004')">
-                <img src="/ride/AllImages/scorpio.jpg" alt="Car Image 4">
-                <div class="car-info">
-                    <div class="car-name">Scorpio&nbsp;- C004</div>
-                    <div class="car-charge">Per Day: 6000</div>
-                    <div class="car-rating">Rating: ★★★☆☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C005" onclick="selectCar('C005')">
-                <img src="/ride/AllImages/verna.jpg" alt="Car Image 5">
-                <div class="car-info">
-                    <div class="car-name">Verna&nbsp;- C005</div>
-                    <div class="car-charge">Per Day: 6500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C006" onclick="selectCar('C006')">
-                <img src="/ride/AllImages/Xuv.jpg" alt="Car Image 6">
-                <div class="car-info">
-                    <div class="car-name">XUV&nbsp;- C006</div>
-                    <div class="car-charge">Per Day: 5000</div>
-                    <div class="car-rating">Rating: ★★★★★</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C007" onclick="selectCar('C007')">
-                <img src="/ride/AllImages/indica.webp" alt="Car Image 1">
-                <div class="car-info">
-                    <div class="car-name">	Indica&nbsp;- C007</div>
-                    <div class="car-charge">Per Day: 2500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C008" onclick="selectCar('C008')">
-                <img src="/ride/AllImages/wagonr.jpg" alt="Car Image 8">
-                <div class="car-info">
-                    <div class="car-name">WagorR&nbsp;- C008</div>
-                    <div class="car-charge">Per Day: 2000</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C009" onclick="selectCar('C009')">
-                <img src="/ride/AllImages/Tavera.jpg" alt="Car Image 9">
-                <div class="car-info">
-                    <div class="car-name">Tavera&nbsp;- C009</div>
-                    <div class="car-charge">Per Day: 5000</div>
-                    <div class="car-rating">Rating: ★★★☆☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C010" onclick="selectCar('C010')">
-                <img src="/ride/AllImages/vitara.jpg" alt="Car Image 10">
-                <div class="car-info">
-                    <div class="car-name">Vittara&nbsp;- C010</div>
-                    <div class="car-charge">Per Day: 4500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C011" onclick="selectCar('C011')">
-                <img src="/ride/AllImages/ertiga.webp" alt="Car Image 1">
-                <div class="car-info">
-                    <div class="car-name">Ertiga&nbsp;- C011</div>
-                    <div class="car-charge">Per Day: 5500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C012" onclick="selectCar('C012')">
-                <img src="/ride/AllImages/xylo.webp" alt="Car Image 1">
-                <div class="car-info">
-                    <div class="car-name">Xylo&nbsp;- C012</div>
-                    <div class="car-charge">Per Day: 4500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C013" onclick="selectCar('C013')">
-                <img src="/ride/AllImages/nexon.webp" alt="Car Image 1">
-                <div class="car-info">
-                    <div class="car-name">Nexon&nbsp;- C013</div>
-                    <div class="car-charge">Per Day: 5500</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C014" onclick="selectCar('C014')">
-                <img src="/ride/AllImages/i20.avif" alt="Car Image 1">
-                <div class="car-info">
-                    <div class="car-name">I20&nbsp;- C014</div>
-                    <div class="car-charge">Per Day: 4000</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
-            <div class="car" data-car-id="C015" onclick="selectCar('C015')">
-                <img src="/ride/AllImages/alto.webp" alt="Car Image 1">
-                <div class="car-info">
-                    <div class="car-name">Alto&nbsp;- C015</div>
-                    <div class="car-charge">Per Day: 2000</div>
-                    <div class="car-rating">Rating: ★★★★☆</div>
-                </div>
-            </div>
+           <%} %>
+            
             
         </div>
         <form id="carForm" action="bookingdates" method="POST" style="display:none;">

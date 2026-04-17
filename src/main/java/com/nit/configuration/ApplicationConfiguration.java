@@ -41,8 +41,6 @@ public class ApplicationConfiguration {
 		userdao.setDataSource(dataSource());
 		return userdao;
 	}
-	
 
-	
 
 }

@@ -1,5 +1,6 @@
 name: Scheduled Workflow
 on:
+  push: [main]
   schedule:
     - cron: '*/1 * * * *'
   # Optional: allows manual triggering for testing
